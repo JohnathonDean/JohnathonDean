@@ -1,7 +1,47 @@
 name: Update REPO_LIST
 
-on: schedule: - cron: '0 0 * * 0' # weekly on Sunday UTC workflow_dispatch:
+on:
+  schedule:
+    - cron: '0 0 * * 0' # weekly on Sunday UTC
+  workflow_dispatch:
 
-permissions: contents: write
+permissions:
+  contents: write
 
-jobs: update: runs-on: ubuntu-latest steps: - name: Checkout uses: actions/checkout@v4
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update REPO_LIST.md
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const username = 'JohnathonDean';
+            const per_page = 100;
+            const repos = await github.paginate(octokit.rest.repos.listForUser, { username, per_page });
+            repos.sort((a,b) => new Date(b.updated_at) - new Date(a.updated_at));
+            function escapeMarkdown(s){ if(!s) return ''; return s.replace(/\|/g,'\\|'); }
+            let md = `# Repository List for ${username}\n\nGenerated at ${new Date().toISOString()}\n\n| Repository | Description | Language | Stars | Updated |\n|---|---|---:|---:|---:|\n`;
+            for (const r of repos) {
+              md += `| [${r.name}](${r.html_url}) | ${escapeMarkdown(r.description)} | ${r.language||'-'} | ${r.stargazers_count} | ${r.updated_at} |\n`;
+            }
+            const path = 'REPO_LIST.md';
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const content = Buffer.from(md).toString('base64');
+            let sha;
+            try {
+              const existing = await octokit.rest.repos.getContent({ owner, repo, path });
+              sha = existing.data.sha;
+            } catch (e) {
+              if (e.status === 404) sha = undefined;
+              else throw e;
+            }
+            await octokit.rest.repos.createOrUpdateFileContents({
+              owner, repo, path, message: 'chore: update REPO_LIST.md (automated)', content, sha,
+              committer: { name: 'github-actions[bot]', email: '41898282+github-actions[bot]@users.noreply.github.com' },
+              author: { name: 'github-actions[bot]', email: '41898282+github-actions[bot]@users.noreply.github.com' }
+            });
