@@ -1,6 +1,8 @@
 name: Update REPO_LIST
 
 on:
+  push:
+    branches: [ 'main' ]
   schedule:
     - cron: '0 0 * * 0' # weekly on Sunday UTC
   workflow_dispatch:
@@ -21,7 +23,8 @@ jobs:
           script: |
             const username = 'JohnathonDean';
             const per_page = 100;
-            const repos = await github.paginate(octokit.rest.repos.listForUser, { username, per_page });
+            // use the provided `github` client
+            const repos = await github.paginate(github.rest.repos.listForUser, { username, per_page });
             repos.sort((a,b) => new Date(b.updated_at) - new Date(a.updated_at));
             function escapeMarkdown(s){ if(!s) return ''; return s.replace(/\|/g,'\\|'); }
             let md = `# Repository List for ${username}\n\nGenerated at ${new Date().toISOString()}\n\n| Repository | Description | Language | Stars | Updated |\n|---|---|---:|---:|---:|\n`;
@@ -34,13 +37,13 @@ jobs:
             const content = Buffer.from(md).toString('base64');
             let sha;
             try {
-              const existing = await octokit.rest.repos.getContent({ owner, repo, path });
+              const existing = await github.rest.repos.getContent({ owner, repo, path });
               sha = existing.data.sha;
             } catch (e) {
               if (e.status === 404) sha = undefined;
               else throw e;
             }
-            await octokit.rest.repos.createOrUpdateFileContents({
+            await github.rest.repos.createOrUpdateFileContents({
               owner, repo, path, message: 'chore: update REPO_LIST.md (automated)', content, sha,
               committer: { name: 'github-actions[bot]', email: '41898282+github-actions[bot]@users.noreply.github.com' },
               author: { name: 'github-actions[bot]', email: '41898282+github-actions[bot]@users.noreply.github.com' }
