@@ -29,9 +29,9 @@ jobs:
             // use the provided `github` client
             const repos = await github.paginate(github.rest.repos.listForUser, { username, per_page });
             repos.sort((a,b) => new Date(b.updated_at) - new Date(a.updated_at));
-            let md = `# Repository List for ${username}\n\nGenerated at ${new Date().toISOString()}\n\n`;
+            let md = `# Repository List for ${username}\n\n`;
             for (const r of repos) {
-              md += `- [${cleanText(r.name)}](${r.html_url}) - Description: ${cleanText(r.description)} - Language: ${cleanText(r.language)} - Stars: ${r.stargazers_count} - Updated: ${cleanText(r.updated_at)}\n`;
+              md += `- [${cleanText(r.name)}](${r.html_url}) - Description: ${cleanText(r.description)}  [${cleanText(r.updated_at)}]\n`;
             }
             const path = 'REPO_LIST.md';
             const owner = context.repo.owner;
