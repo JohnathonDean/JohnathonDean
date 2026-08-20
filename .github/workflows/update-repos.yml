@@ -1,0 +1,7 @@
+name: Update REPO_LIST
+
+on: schedule: - cron: '0 0 * * 0' # weekly on Sunday UTC workflow_dispatch:
+
+permissions: contents: write
+
+jobs: update: runs-on: ubuntu-latest steps: - name: Checkout uses: actions/checkout@v4
