@@ -3,59 +3,59 @@
 ## Index
 
 ### 个人主页
-- [JohnathonDean.github.io](https://github.com/JohnathonDean/JohnathonDean.github.io)
+- [JohnathonDean.github.io](https://github.com/JohnathonDean/JohnathonDean.github.io) - Description: -  [2022-10-29T08:28:44Z]
 
 ### Carto
-- [cartographer](https://github.com/JohnathonDean/cartographer) - Cartographer is a SLAM system（已注解）
-- [cartographer_ros](https://github.com/JohnathonDean/cartographer_ros) - ROS integration for Cartographer（已注解）
-- [carto_map_toolbox](https://github.com/JohnathonDean/carto_map_toolbox) - Cartographer 地图编辑工具
+- [cartographer](https://github.com/JohnathonDean/cartographer) - Description: Cartographer is a system that provides real-time simultaneous localization and mapping (SLAM) in 2D and 3D across multiple platforms and sensor configurations.对官方仓库代码添加注解  [2024-05-14T09:16:59Z]
+- [cartographer_ros](https://github.com/JohnathonDean/cartographer_ros) - Description: Provides ROS integration for Cartographer.对官方仓库代码添加注解  [2023-08-17T02:18:55Z]
+- [carto_map_toolbox](https://github.com/JohnathonDean/carto_map_toolbox) - Description: Cartographer地图编辑工具  [2025-05-26T01:54:03Z]
 
 ### 3D lidar SLAM
-- [slam_gmapping](https://github.com/JohnathonDean/slam_gmapping) - http://www.ros.org/wiki/slam_gmapping
-- [hdl_graph_slam](https://github.com/JohnathonDean/hdl_graph_slam) - 3D LIDAR-based Graph SLAM
-- [hdl_localization](https://github.com/JohnathonDean/hdl_localization) - Real-time 3D localization using a 3D LIDAR
-- [A-LOAM](https://github.com/JohnathonDean/A-LOAM) - Advanced implementation of LOAM
-- [LIO-SAM](https://github.com/JohnathonDean/LIO-SAM) - LIO-SAM: Lidar Inertial Odometry via Smoothing and Mapping
-- [d_point_lio](https://github.com/JohnathonDean/d_point_lio) - 简化的 Point-LIO 版本
-- [Point-LIO](https://github.com/JohnathonDean/Point-LIO) - 对原作的Point-LIO进行代码重构整理
-- [FAST_LIO](https://github.com/JohnathonDean/FAST_LIO) - 计算高效且鲁棒的 LIO 包
-- [FAST_LIO_LOCALIZATION](https://github.com/JohnathonDean/FAST_LIO_LOCALIZATION) - 基于 FAST-LIO 的重定位框架
-- [faster-lio](https://github.com/JohnathonDean/faster-lio) - Faster-LIO: Lightweight Lidar-inertial Odometry
-- [lightning-lm](https://github.com/JohnathonDean/lightning-lm) - Lidar Localization and Mapping
-- [ndt_omp](https://github.com/JohnathonDean/ndt_omp) - Multi-threaded and SSE friendly NDT algorithm
+- [slam_gmapping](https://github.com/JohnathonDean/slam_gmapping) - Description: http://www.ros.org/wiki/slam_gmapping  [2022-08-29T03:58:10Z]
+- [hdl_graph_slam](https://github.com/JohnathonDean/hdl_graph_slam) - Description: 3D LIDAR-based Graph SLAM  [2026-02-03T03:09:06Z]
+- [hdl_localization](https://github.com/JohnathonDean/hdl_localization) - Description: Real-time 3D localization using a (velodyne) 3D LIDAR  [2024-08-29T11:45:24Z]
+- [A-LOAM](https://github.com/JohnathonDean/A-LOAM) - Description: Advanced implementation of LOAM  [2026-04-28T10:42:16Z]
+- [LIO-SAM](https://github.com/JohnathonDean/LIO-SAM) - Description: LIO-SAM: Tightly-coupled Lidar Inertial Odometry via Smoothing and Mapping  [2026-06-04T06:06:39Z]
+- [d_point_lio](https://github.com/JohnathonDean/d_point_lio) - Description: 简化的Point-LIO版本，只使用IMU作为输出的模式  [2026-06-04T05:57:08Z]
+- [Point-LIO](https://github.com/JohnathonDean/Point-LIO) - Description: 对原作的Point-LIO进行代码重构整理  [2026-04-07T12:50:07Z]
+- [FAST_LIO](https://github.com/JohnathonDean/FAST_LIO) - Description: A computationally efficient and robust LiDAR-inertial odometry (LIO) package  [2025-08-01T08:10:02Z]
+- [FAST_LIO_LOCALIZATION](https://github.com/JohnathonDean/FAST_LIO_LOCALIZATION) - Description: A simple localization framework that can re-localize in built maps based on FAST-LIO.  [2026-07-02T09:10:48Z]
+- [faster-lio](https://github.com/JohnathonDean/faster-lio) - Description: Faster-LIO: Lightweight Tightly Coupled Lidar-inertial Odometry using Parallel Sparse Incremental Voxels  [2025-12-11T06:59:41Z]
+- [lightning-lm](https://github.com/JohnathonDean/lightning-lm) - Description: Lidar Localization and Mapping  [2026-04-08T09:55:42Z]
+- [ndt_omp](https://github.com/JohnathonDean/ndt_omp) - Description: Multi-threaded and SSE friendly NDT algorithm  [2022-09-05T08:59:53Z]
 
 ### 视觉激光融合SLAM
-- [FAST-LIVO2](https://github.com/JohnathonDean/FAST-LIVO2) - Fast, Direct LiDAR-Inertial-Visual Odometry
-- [GS-LIVO](https://github.com/JohnathonDean/GS-LIVO)
-- [FAST-Calib](https://github.com/JohnathonDean/FAST-Calib) - Extrinsic Calibration Tool for LiDAR-camera Systems
+- [FAST-LIVO2](https://github.com/JohnathonDean/FAST-LIVO2) - Description: FAST-LIVO2: Fast, Direct LiDAR-Inertial-Visual Odometry  [2026-07-02T09:25:05Z]
+- [GS-LIVO](https://github.com/JohnathonDean/GS-LIVO) - Description: -  [2026-07-02T09:17:57Z]
+- [FAST-Calib](https://github.com/JohnathonDean/FAST-Calib) - Description: A Handy Extrinsic Calibration Tool for LiDAR-camera Systems.  [2026-07-02T09:24:30Z]
 
 ### VSLAM
-- [ORB_SLAM2](https://github.com/JohnathonDean/ORB_SLAM2) - Real-Time SLAM for Monocular, Stereo and RGB-D Cameras, with Loop Detection and Relocalization Capabilities
-- [ORB_SLAM3](https://github.com/JohnathonDean/ORB_SLAM3) - ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial and Multi-Map SLAM
-- [VINS-Fusion](https://github.com/JohnathonDean/VINS-Fusion) - An optimization-based multi-sensor state estimator
+- [ORB_SLAM2](https://github.com/JohnathonDean/ORB_SLAM2) - Description: Real-Time SLAM for Monocular, Stereo and RGB-D Cameras, with Loop Detection and Relocalization Capabilities  [2022-09-06T01:06:29Z]
+- [ORB_SLAM3](https://github.com/JohnathonDean/ORB_SLAM3) - Description: ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial and Multi-Map SLAM  [2022-09-06T01:17:50Z]
+- [VINS-Fusion](https://github.com/JohnathonDean/VINS-Fusion) - Description: An optimization-based multi-sensor state estimator  [2026-07-02T09:18:52Z]
 
 ### 机器人算法
-- [apollo](https://github.com/JohnathonDean/apollo) - An open autonomous driving platform
-- [navigation](https://github.com/JohnathonDean/navigation) - ROS Navigation stack
-- [ESKF](https://github.com/JohnathonDean/ESKF) - Error State Kalman Filter 实现
-- [robot_pose_ekf](https://github.com/JohnathonDean/robot_pose_ekf) - robot_pose_ekf package for ROS Melodic and later
-- [orocos-bayesian-filtering](https://github.com/JohnathonDean/orocos-bayesian-filtering) - The orocos Bayesian Filtering Library
+- [apollo](https://github.com/JohnathonDean/apollo) - Description: An open autonomous driving platform  [2022-12-29T09:00:18Z]
+- [navigation](https://github.com/JohnathonDean/navigation) - Description: ROS Navigation stack.  Code for finding where the robot is and how it can get somewhere else.  [2023-12-26T11:50:48Z]
+- [ESKF](https://github.com/JohnathonDean/ESKF) - Description: An implementation of an Error State Kalman Filter (ESKF)  [2025-07-29T12:35:50Z]
+- [robot_pose_ekf](https://github.com/JohnathonDean/robot_pose_ekf) - Description: robot_pose_ekf package for ROS Melodic and later  [2024-08-29T08:40:46Z]
+- [orocos-bayesian-filtering](https://github.com/JohnathonDean/orocos-bayesian-filtering) - Description: The orocos Bayesian Filtering Library  [2024-08-29T08:44:16Z]
 
 ### 其他
-- [cplusplus_projects](https://github.com/JohnathonDean/cplusplus_projects) - some basic test project in C++
-- [AlgorithmsIntroductory](https://github.com/JohnathonDean/AlgorithmsIntroductory)
-- [aubo_robot_base](https://github.com/JohnathonDean/aubo_robot_base)
-- [HeyGem.ai](https://github.com/JohnathonDean/HeyGem.ai)
-- [lidar_ws](https://github.com/JohnathonDean/lidar_ws)
-- [livox_ros_driver2](https://github.com/JohnathonDean/livox_ros_driver2) - Livox device driver for ROS
-- [PV-LIO](https://github.com/JohnathonDean/PV-LIO) - A probabilistic voxelmap-based LiDAR-Inertial Odometry.
-- [The-C-Book](https://github.com/JohnathonDean/The-C-Book)
-- [openslam_gmapping](https://github.com/JohnathonDean/openslam_gmapping)
-- [serial_ubuntu](https://github.com/JohnathonDean/serial_ubuntu)
-- [rgbd_scan](https://github.com/JohnathonDean/rgbd_scan)
+- [cplusplus_projects](https://github.com/JohnathonDean/cplusplus_projects) - Description: some basic test project in C++  [2026-03-12T08:20:54Z]
+- [AlgorithmsIntroductory](https://github.com/JohnathonDean/AlgorithmsIntroductory) - Description: -  [2026-03-15T05:20:24Z]
+- [aubo_robot_base](https://github.com/JohnathonDean/aubo_robot_base) - Description: -  [2019-09-22T03:04:37Z]
+- [HeyGem.ai](https://github.com/JohnathonDean/HeyGem.ai) - Description: -  [2025-04-07T03:43:38Z]
+- [lidar_ws](https://github.com/JohnathonDean/lidar_ws) - Description: -  [2019-11-21T02:35:44Z]
+- [livox_ros_driver2](https://github.com/JohnathonDean/livox_ros_driver2) - Description: Livox device driver under Ros(Compatible with ros and ros2), support Lidar HAP and Mid-360.  [2025-12-22T07:44:14Z]
+- [PV-LIO](https://github.com/JohnathonDean/PV-LIO) - Description: A probabilistic voxelmap-based LiDAR-Inertial Odometry.  [2026-07-02T09:14:07Z]
+- [The-C-Book](https://github.com/JohnathonDean/The-C-Book) - Description: -  [2026-03-13T03:13:50Z]
+- [openslam_gmapping](https://github.com/JohnathonDean/openslam_gmapping) - Description: -  [2022-08-29T05:56:59Z]
+- [serial_ubuntu](https://github.com/JohnathonDean/serial_ubuntu) - Description: -  [2021-08-22T09:30:42Z]
+- [rgbd_scan](https://github.com/JohnathonDean/rgbd_scan) - Description: -  [2019-11-21T02:22:22Z]
 
 ### 开源资源
-- [awesome-modern-cpp](https://github.com/JohnathonDean/awesome-modern-cpp) - A collection of resources on modern C++
-- [awesome-programming-books](https://github.com/JohnathonDean/awesome-programming-books) - 经典编程书籍大全
-- [free-programming-books-zh_CN](https://github.com/JohnathonDean/free-programming-books-zh_CN) - 免费的计算机编程类中文书籍
-- [Probabilistic-Robotics](https://github.com/JohnathonDean/Probabilistic-Robotics) - 《概率机器人》书和课后习题
+- [awesome-modern-cpp](https://github.com/JohnathonDean/awesome-modern-cpp) - Description: A collection of resources on modern C++  [2026-04-08T09:39:46Z]
+- [awesome-programming-books](https://github.com/JohnathonDean/awesome-programming-books) - Description: 经典编程书籍大全，涵盖：计算机系统与网络、系统架构、算法与数据结构、前端开发、后端开发、移动开发、数据库、测试、项目与团队、程序员职业修炼、求职面试等  [2023-08-23T06:22:21Z]
+- [free-programming-books-zh_CN](https://github.com/JohnathonDean/free-programming-books-zh_CN) - Description: :books: 免费的计算机编程类中文书籍，欢迎投稿  [2023-08-23T06:21:30Z]
+- [Probabilistic-Robotics](https://github.com/JohnathonDean/Probabilistic-Robotics) - Description: 《概率机器人》书和课后习题  [2024-02-20T07:43:00Z]
