@@ -33,26 +33,13 @@ jobs:
             function normalizeText(s) {
               return String(s ?? '').replace(/\r\n/g, '\n');
             }
-            function extractReadmeDescription(line) {
-              const match = line.match(/^\s*-\s*\[([^\]]+)\]\(https:\/\/github\.com\/JohnathonDean\/([^)]+)\)\s*(.*)$/);
-              if (!match) return null;
-              let tail = match[3].trim();
-              tail = tail.replace(/\s*&#x20;\s*$/, '');
-              tail = tail.replace(/^\-\s*/, '');
-              const bracket = tail.match(/^\[([^\]]+)\]\s*Description:\s*(.*)$/);
-              if (bracket) return cleanText(bracket[2]);
-              const labeled = tail.match(/^Description:\s*(.*)$/i);
-              if (labeled) return cleanText(labeled[1].replace(/\s*\[[^\]]+\]\s*$/, ''));
-              return cleanText(tail);
-            }
             function updateReadme(content, repoMap) {
               return content.split(/\r?\n/).map((line) => {
                 const match = line.match(/^(\s*-\s*)\[([^\]]+)\]\(https:\/\/github\.com\/JohnathonDean\/([^)]+)\)(.*)$/);
                 if (!match) return line;
                 const repo = repoMap.get(match[3]);
                 if (!repo) return line;
-                const description = extractReadmeDescription(line);
-                return formatRepoLine(repo, description, match[1]);
+                return formatRepoLine(repo, repo.description, match[1]);
               }).join('\n');
             }
             // use the provided `github` client
