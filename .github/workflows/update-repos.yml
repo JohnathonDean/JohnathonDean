@@ -28,7 +28,7 @@ jobs:
               return String(s ?? '').replace(/\r?\n+/g, ' ').trim() || '-';
             }
             function formatRepoLine(r, description, prefix = '- ') {
-              return `${prefix}[${cleanText(r.name)}](${r.html_url}) - [${cleanText(r.updated_at)}] Description: ${cleanText(description)} &#x20;`;
+              return `${prefix}[${cleanText(r.name)}](${r.html_url}) - [${cleanText(r.updated_at)}] ${cleanText(description)} &#x20;`;
             }
             function normalizeText(s) {
               return String(s ?? '').replace(/\r\n/g, '\n');
