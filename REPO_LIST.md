@@ -1,21 +1,22 @@
 # Repository List for JohnathonDean
 
-- [JohnathonDean](https://github.com/JohnathonDean/JohnathonDean) - [2026-08-21T06:10:31Z] Profile README for JohnathonDean &#x20;
+- [Point-LIO](https://github.com/JohnathonDean/Point-LIO) - [2026-08-21T07:20:46Z] Point-LIO代码重构整理 &#x20;
+- [lightning-lm](https://github.com/JohnathonDean/lightning-lm) - [2026-08-21T07:06:07Z] Lidar Localization and Mapping in FasterLIO &#x20;
+- [slam_gmapping](https://github.com/JohnathonDean/slam_gmapping) - [2026-08-21T07:04:57Z] gmapping ROS官方 &#x20;
+- [GS-LIVO](https://github.com/JohnathonDean/GS-LIVO) - [2026-08-21T07:01:51Z] Gaussian Splatting LiDAR-Inertial-Visual Odometry &#x20;
+- [JohnathonDean](https://github.com/JohnathonDean/JohnathonDean) - [2026-08-21T06:17:00Z] Profile README for JohnathonDean &#x20;
 - [cartographer_ros](https://github.com/JohnathonDean/cartographer_ros) - [2026-08-21T05:49:58Z] Provides ROS integration for Cartographer.官方仓库代码注释 &#x20;
 - [JohnathonDean.github.io](https://github.com/JohnathonDean/JohnathonDean.github.io) - [2026-08-21T05:49:14Z] JohnathonDean的个人主页 &#x20;
 - [cartographer](https://github.com/JohnathonDean/cartographer) - [2026-08-21T05:45:41Z] Cartographer 官方仓库代码注释 &#x20;
 - [FAST-LIVO2](https://github.com/JohnathonDean/FAST-LIVO2) - [2026-07-02T09:25:05Z] FAST-LIVO2: Fast, Direct LiDAR-Inertial-Visual Odometry &#x20;
 - [FAST-Calib](https://github.com/JohnathonDean/FAST-Calib) - [2026-07-02T09:24:30Z] A Handy Extrinsic Calibration Tool for LiDAR-camera Systems. &#x20;
 - [VINS-Fusion](https://github.com/JohnathonDean/VINS-Fusion) - [2026-07-02T09:18:52Z] An optimization-based multi-sensor state estimator &#x20;
-- [GS-LIVO](https://github.com/JohnathonDean/GS-LIVO) - [2026-07-02T09:17:57Z] - &#x20;
 - [PV-LIO](https://github.com/JohnathonDean/PV-LIO) - [2026-07-02T09:14:07Z] A probabilistic voxelmap-based LiDAR-Inertial Odometry. &#x20;
 - [FAST_LIO_LOCALIZATION](https://github.com/JohnathonDean/FAST_LIO_LOCALIZATION) - [2026-07-02T09:10:48Z] A simple localization framework that can re-localize in built maps based on FAST-LIO. &#x20;
 - [LIO-SAM](https://github.com/JohnathonDean/LIO-SAM) - [2026-06-04T06:06:39Z] LIO-SAM: Tightly-coupled Lidar Inertial Odometry via Smoothing and Mapping &#x20;
 - [d_point_lio](https://github.com/JohnathonDean/d_point_lio) - [2026-06-04T05:57:08Z] 简化的Point-LIO版本，只使用IMU作为输出的模式 &#x20;
 - [A-LOAM](https://github.com/JohnathonDean/A-LOAM) - [2026-04-28T10:42:16Z] Advanced implementation of LOAM &#x20;
-- [lightning-lm](https://github.com/JohnathonDean/lightning-lm) - [2026-04-08T09:55:42Z] Lidar Localization and Mapping &#x20;
 - [awesome-modern-cpp](https://github.com/JohnathonDean/awesome-modern-cpp) - [2026-04-08T09:39:46Z] A collection of resources on modern C++ &#x20;
-- [Point-LIO](https://github.com/JohnathonDean/Point-LIO) - [2026-04-07T12:50:07Z] 对原作的Point-LIO进行代码重构整理 &#x20;
 - [AlgorithmsIntroductory](https://github.com/JohnathonDean/AlgorithmsIntroductory) - [2026-03-15T05:20:24Z] - &#x20;
 - [The-C-Book](https://github.com/JohnathonDean/The-C-Book) - [2026-03-13T03:13:50Z] - &#x20;
 - [cplusplus_projects](https://github.com/JohnathonDean/cplusplus_projects) - [2026-03-12T08:20:54Z] some basic test project in C++ &#x20;
@@ -38,7 +39,6 @@
 - [ORB_SLAM2](https://github.com/JohnathonDean/ORB_SLAM2) - [2022-09-06T01:06:29Z] Real-Time SLAM for Monocular, Stereo and RGB-D Cameras, with Loop Detection and Relocalization Capabilities &#x20;
 - [ndt_omp](https://github.com/JohnathonDean/ndt_omp) - [2022-09-05T08:59:53Z] Multi-threaded and SSE friendly NDT algorithm &#x20;
 - [openslam_gmapping](https://github.com/JohnathonDean/openslam_gmapping) - [2022-08-29T05:56:59Z] - &#x20;
-- [slam_gmapping](https://github.com/JohnathonDean/slam_gmapping) - [2022-08-29T03:58:10Z] http://www.ros.org/wiki/slam_gmapping &#x20;
 - [serial_ubuntu](https://github.com/JohnathonDean/serial_ubuntu) - [2021-08-22T09:30:42Z] - &#x20;
 - [lidar_ws](https://github.com/JohnathonDean/lidar_ws) - [2019-11-21T02:35:44Z] - &#x20;
 - [rgbd_scan](https://github.com/JohnathonDean/rgbd_scan) - [2019-11-21T02:22:22Z] - &#x20;
