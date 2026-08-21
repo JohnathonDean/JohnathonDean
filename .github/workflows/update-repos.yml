@@ -17,36 +17,94 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Update REPO_LIST.md
+      - name: Update REPO_LIST.md and README.md
         uses: actions/github-script@v6
         with:
           script: |
+            const fs = require('fs');
             const username = 'JohnathonDean';
             const per_page = 100;
             function cleanText(s) {
               return String(s ?? '').replace(/\r?\n+/g, ' ').trim() || '-';
             }
+            function formatRepoLine(r, prefix = '- ') {
+              return `${prefix}[${cleanText(r.name)}](${r.html_url}) - Description: ${cleanText(r.description)}  [${cleanText(r.updated_at)}]`;
+            }
+            function normalizeText(s) {
+              return String(s ?? '').replace(/\r\n/g, '\n');
+            }
+            function updateReadme(content, repoMap) {
+              return content.split(/\r?\n/).map((line) => {
+                const match = line.match(/^(\s*-\s*)\[([^\]]+)\]\(https:\/\/github\.com\/JohnathonDean\/([^)]+)\)(.*)$/);
+                if (!match) return line;
+                const repo = repoMap.get(match[3]);
+                if (!repo) return line;
+                return formatRepoLine(repo, match[1]);
+              }).join('\n');
+            }
             // use the provided `github` client
             const repos = await github.paginate(github.rest.repos.listForUser, { username, per_page });
             repos.sort((a,b) => new Date(b.updated_at) - new Date(a.updated_at));
-            let md = `# Repository List for ${username}\n\n`;
-            for (const r of repos) {
-              md += `- [${cleanText(r.name)}](${r.html_url}) - Description: ${cleanText(r.description)}  [${cleanText(r.updated_at)}]\n`;
+            const repoMap = new Map(repos.map((r) => [r.name, r]));
+            const repoListMd = `# Repository List for ${username}\n\n${repos.map((r) => formatRepoLine(r)).join('\n')}\n`;
+            const readmePath = 'README.md';
+            const readmeExists = fs.existsSync(readmePath);
+            const readmeRaw = readmeExists ? fs.readFileSync(readmePath, 'utf8') : '';
+            const updatedReadme = readmeExists ? updateReadme(readmeRaw, repoMap) : '';
+            const repoListPath = 'REPO_LIST.md';
+            const repoListExists = fs.existsSync(repoListPath);
+            const currentRepoList = repoListExists ? fs.readFileSync(repoListPath, 'utf8') : '';
+            const changes = [];
+            if (!repoListExists || normalizeText(currentRepoList) !== normalizeText(repoListMd)) {
+              changes.push({ path: repoListPath, content: repoListMd });
             }
-            const path = 'REPO_LIST.md';
+            if (readmeExists && normalizeText(readmeRaw) !== normalizeText(updatedReadme)) {
+              changes.push({ path: readmePath, content: updatedReadme });
+            }
+            if (changes.length === 0) {
+              console.log('No repository list changes detected.');
+              return;
+            }
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            const content = Buffer.from(md).toString('base64');
-            let sha;
-            try {
-              const existing = await github.rest.repos.getContent({ owner, repo, path });
-              sha = existing.data.sha;
-            } catch (e) {
-              if (e.status === 404) sha = undefined;
-              else throw e;
+            const { data: repoInfo } = await github.rest.repos.get({ owner, repo });
+            const branch = repoInfo.default_branch;
+            const { data: ref } = await github.rest.git.getRef({ owner, repo, ref: `heads/${branch}` });
+            const { data: baseCommit } = await github.rest.git.getCommit({ owner, repo, commit_sha: ref.object.sha });
+            const tree = [];
+            for (const change of changes) {
+              const content = Buffer.from(change.content, 'utf8').toString('base64');
+              const { data: blob } = await github.rest.git.createBlob({
+                owner,
+                repo,
+                content,
+                encoding: 'base64',
+              });
+              tree.push({ path: change.path, mode: '100644', type: 'blob', sha: blob.sha });
             }
-            await github.rest.repos.createOrUpdateFileContents({
-              owner, repo, path, message: 'chore: update REPO_LIST.md (automated)', content, sha,
+            const { data: newTree } = await github.rest.git.createTree({
+              owner,
+              repo,
+              base_tree: baseCommit.tree.sha,
+              tree,
+            });
+            const message = changes.length === 2
+              ? 'chore: sync REPO_LIST and README (automated)'
+              : changes[0].path === 'README.md'
+                ? 'chore: sync README repo entries (automated)'
+                : 'chore: update REPO_LIST.md (automated)';
+            const { data: newCommit } = await github.rest.git.createCommit({
+              owner,
+              repo,
+              message,
+              tree: newTree.sha,
+              parents: [ref.object.sha],
               committer: { name: 'github-actions[bot]', email: '41898282+github-actions[bot]@users.noreply.github.com' },
-              author: { name: 'github-actions[bot]', email: '41898282+github-actions[bot]@users.noreply.github.com' }
+              author: { name: 'github-actions[bot]', email: '41898282+github-actions[bot]@users.noreply.github.com' },
+            });
+            await github.rest.git.updateRef({
+              owner,
+              repo,
+              ref: `heads/${branch}`,
+              sha: newCommit.sha,
             });
