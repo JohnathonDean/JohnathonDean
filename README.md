@@ -11,6 +11,7 @@
 - [carto_map_toolbox](https://github.com/JohnathonDean/carto_map_toolbox) - [2025-05-26T01:54:03Z] Cartographer地图编辑工具 &#x20;
 
 ### 3D lidar SLAM
+- [openslam_gmapping](https://github.com/JohnathonDean/openslam_gmapping) - [2022-08-29T05:56:59Z] - &#x20;
 - [slam_gmapping](https://github.com/JohnathonDean/slam_gmapping) - [2026-08-21T07:04:57Z] gmapping ROS官方 &#x20;
 - [hdl_graph_slam](https://github.com/JohnathonDean/hdl_graph_slam) - [2026-02-03T03:09:06Z] 3D LIDAR-based Graph SLAM &#x20;
 - [hdl_localization](https://github.com/JohnathonDean/hdl_localization) - [2024-08-29T11:45:24Z] Real-time 3D localization using a (velodyne) 3D LIDAR &#x20;
@@ -22,7 +23,10 @@
 - [FAST_LIO_LOCALIZATION](https://github.com/JohnathonDean/FAST_LIO_LOCALIZATION) - [2026-07-02T09:10:48Z] A simple localization framework that can re-localize in built maps based on FAST-LIO. &#x20;
 - [faster-lio](https://github.com/JohnathonDean/faster-lio) - [2025-12-11T06:59:41Z] Faster-LIO: Lightweight Tightly Coupled Lidar-inertial Odometry using Parallel Sparse Incremental Voxels &#x20;
 - [lightning-lm](https://github.com/JohnathonDean/lightning-lm) - [2026-08-21T07:06:07Z] Lidar Localization and Mapping in FasterLIO &#x20;
+- [PV-LIO](https://github.com/JohnathonDean/PV-LIO) - [2026-07-02T09:14:07Z] A probabilistic voxelmap-based LiDAR-Inertial Odometry. &#x20;
 - [ndt_omp](https://github.com/JohnathonDean/ndt_omp) - [2022-09-05T08:59:53Z] Multi-threaded and SSE friendly NDT algorithm &#x20;
+- [3d_bbs](https://github.com/JohnathonDean/3d_bbs) - [2026-08-21T07:39:31Z] 3D PointCloud Scan Matching Using Branch-and-Bound Algorithm &#x20;
+- [btc_descriptor](https://github.com/JohnathonDean/btc_descriptor) - [2026-08-28T08:30:45Z] - &#x20;
 
 ### 视觉激光融合SLAM
 - [FAST-LIVO2](https://github.com/JohnathonDean/FAST-LIVO2) - [2026-07-02T09:25:05Z] FAST-LIVO2: Fast, Direct LiDAR-Inertial-Visual Odometry &#x20;
@@ -44,19 +48,16 @@
 ### 其他
 - [cplusplus_projects](https://github.com/JohnathonDean/cplusplus_projects) - [2026-03-12T08:20:54Z] some basic test project in C++ &#x20;
 - [AlgorithmsIntroductory](https://github.com/JohnathonDean/AlgorithmsIntroductory) - [2026-03-15T05:20:24Z] - &#x20;
-- [JohnathonDean](https://github.com/JohnathonDean/JohnathonDean) - [2026-08-23T01:49:10Z] Profile README for JohnathonDean &#x20;
-- [aubo_robot_base](https://github.com/JohnathonDean/aubo_robot_base) - [2019-09-22T03:04:37Z] - &#x20;
 - [HeyGem.ai](https://github.com/JohnathonDean/HeyGem.ai) - [2025-04-07T03:43:38Z] - &#x20;
-- [lidar_ws](https://github.com/JohnathonDean/lidar_ws) - [2019-11-21T02:35:44Z] - &#x20;
 - [livox_ros_driver2](https://github.com/JohnathonDean/livox_ros_driver2) - [2025-12-22T07:44:14Z] Livox device driver under Ros(Compatible with ros and ros2), support Lidar HAP and Mid-360. &#x20;
-- [PV-LIO](https://github.com/JohnathonDean/PV-LIO) - [2026-07-02T09:14:07Z] A probabilistic voxelmap-based LiDAR-Inertial Odometry. &#x20;
-- [The-C-Book](https://github.com/JohnathonDean/The-C-Book) - [2026-03-13T03:13:50Z] - &#x20;
-- [openslam_gmapping](https://github.com/JohnathonDean/openslam_gmapping) - [2022-08-29T05:56:59Z] - &#x20;
 - [serial_ubuntu](https://github.com/JohnathonDean/serial_ubuntu) - [2021-08-22T09:30:42Z] - &#x20;
 - [rgbd_scan](https://github.com/JohnathonDean/rgbd_scan) - [2019-11-21T02:22:22Z] - &#x20;
+- [aubo_robot_base](https://github.com/JohnathonDean/aubo_robot_base) - [2019-09-22T03:04:37Z] - &#x20;
+- [lidar_ws](https://github.com/JohnathonDean/lidar_ws) - [2019-11-21T02:35:44Z] - &#x20;
 
 ### 开源资源
 - [awesome-modern-cpp](https://github.com/JohnathonDean/awesome-modern-cpp) - [2026-04-08T09:39:46Z] A collection of resources on modern C++ &#x20;
 - [awesome-programming-books](https://github.com/JohnathonDean/awesome-programming-books) - [2023-08-23T06:22:21Z] 经典编程书籍大全，涵盖：计算机系统与网络、系统架构、算法与数据结构、前端开发、后端开发、移动开发、数据库、测试、项目与团队、程序员职业修炼、求职面试等 &#x20;
+- [The-C-Book](https://github.com/JohnathonDean/The-C-Book) - [2026-03-13T03:13:50Z] - &#x20;
 - [free-programming-books-zh_CN](https://github.com/JohnathonDean/free-programming-books-zh_CN) - [2023-08-23T06:21:30Z] :books: 免费的计算机编程类中文书籍，欢迎投稿 &#x20;
 - [Probabilistic-Robotics](https://github.com/JohnathonDean/Probabilistic-Robotics) - [2024-02-20T07:43:00Z] 《概率机器人》书和课后习题 &#x20;
