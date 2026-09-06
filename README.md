@@ -26,7 +26,7 @@
 - [PV-LIO](https://github.com/JohnathonDean/PV-LIO) - [2026-07-02T09:14:07Z] A probabilistic voxelmap-based LiDAR-Inertial Odometry. &#x20;
 - [ndt_omp](https://github.com/JohnathonDean/ndt_omp) - [2022-09-05T08:59:53Z] Multi-threaded and SSE friendly NDT algorithm &#x20;
 - [3d_bbs](https://github.com/JohnathonDean/3d_bbs) - [2026-08-21T07:39:31Z] 3D PointCloud Scan Matching Using Branch-and-Bound Algorithm &#x20;
-- [btc_descriptor](https://github.com/JohnathonDean/btc_descriptor) - [2026-08-28T08:30:45Z] - &#x20;
+- [btc_descriptor](https://github.com/JohnathonDean/btc_descriptor) - [2026-09-01T03:35:24Z] BTC descriptor for Lidar SLAM loop detection &#x20;
 
 ### 视觉激光融合SLAM
 - [FAST-LIVO2](https://github.com/JohnathonDean/FAST-LIVO2) - [2026-07-02T09:25:05Z] FAST-LIVO2: Fast, Direct LiDAR-Inertial-Visual Odometry &#x20;
