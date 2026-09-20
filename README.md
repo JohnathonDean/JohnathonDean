@@ -21,7 +21,7 @@
 - [Point-LIO](https://github.com/JohnathonDean/Point-LIO) - [2026-08-21T07:20:46Z] Point-LIO代码重构整理 &#x20;
 - [FAST_LIO](https://github.com/JohnathonDean/FAST_LIO) - [2025-08-01T08:10:02Z] A computationally efficient and robust LiDAR-inertial odometry (LIO) package &#x20;
 - [FAST_LIO_LOCALIZATION](https://github.com/JohnathonDean/FAST_LIO_LOCALIZATION) - [2026-07-02T09:10:48Z] A simple localization framework that can re-localize in built maps based on FAST-LIO. &#x20;
-- [faster-lio](https://github.com/JohnathonDean/faster-lio) - [2025-12-11T06:59:41Z] Faster-LIO: Lightweight Tightly Coupled Lidar-inertial Odometry using Parallel Sparse Incremental Voxels &#x20;
+- [faster-lio](https://github.com/JohnathonDean/faster-lio) - [2026-09-17T03:07:01Z] Faster-LIO: Lightweight Tightly Coupled Lidar-inertial Odometry using Parallel Sparse Incremental Voxels &#x20;
 - [lightning-lm](https://github.com/JohnathonDean/lightning-lm) - [2026-08-21T07:06:07Z] Lidar Localization and Mapping in FasterLIO &#x20;
 - [PV-LIO](https://github.com/JohnathonDean/PV-LIO) - [2026-07-02T09:14:07Z] A probabilistic voxelmap-based LiDAR-Inertial Odometry. &#x20;
 - [ndt_omp](https://github.com/JohnathonDean/ndt_omp) - [2022-09-05T08:59:53Z] Multi-threaded and SSE friendly NDT algorithm &#x20;
