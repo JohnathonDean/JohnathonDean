@@ -1,6 +1,7 @@
 # Repository List for JohnathonDean
 
-- [JohnathonDean](https://github.com/JohnathonDean/JohnathonDean) - [2026-09-27T05:00:03Z] Profile README for JohnathonDean &#x20;
+- [Compositor](https://github.com/JohnathonDean/Compositor) - [2026-10-11T01:38:09Z] The Photoshop alternative for Mac &#x20;
+- [JohnathonDean](https://github.com/JohnathonDean/JohnathonDean) - [2026-10-04T05:30:16Z] Profile README for JohnathonDean &#x20;
 - [rob101](https://github.com/JohnathonDean/rob101) - [2026-09-22T09:58:21Z] Pilot course for Robotics 101: Computational Linear Algebra &#x20;
 - [faster-lio](https://github.com/JohnathonDean/faster-lio) - [2026-09-17T03:07:01Z] Faster-LIO: Lightweight Tightly Coupled Lidar-inertial Odometry using Parallel Sparse Incremental Voxels &#x20;
 - [btc_descriptor](https://github.com/JohnathonDean/btc_descriptor) - [2026-09-01T03:35:24Z] BTC descriptor for Lidar SLAM loop detection &#x20;
